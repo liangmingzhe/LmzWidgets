@@ -1,0 +1,2 @@
+# DemoforBatteryView
+A simple BatteryView
