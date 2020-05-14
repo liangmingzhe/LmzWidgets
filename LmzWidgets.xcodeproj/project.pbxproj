@@ -35,7 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		EE8C90282421E0CB0085E889 /* DemoForBattery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoForBattery.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE8C90282421E0CB0085E889 /* LmzWidgets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LmzWidgets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE8C902B2421E0CB0085E889 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EE8C902C2421E0CB0085E889 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		EE8C90312421E0CB0085E889 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -44,10 +44,10 @@
 		EE8C903A2421E0CD0085E889 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE8C903C2421E0CD0085E889 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE8C903D2421E0CD0085E889 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		EE8C90432421E0CD0085E889 /* DemoForBatteryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoForBatteryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE8C90432421E0CD0085E889 /* LmzWidgetsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LmzWidgetsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE8C90472421E0CD0085E889 /* DemoForBatteryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoForBatteryTests.m; sourceTree = "<group>"; };
 		EE8C90492421E0CD0085E889 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EE8C904E2421E0CD0085E889 /* DemoForBatteryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoForBatteryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE8C904E2421E0CD0085E889 /* LmzWidgetsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LmzWidgetsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE8C90522421E0CD0085E889 /* DemoForBatteryUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoForBatteryUITests.m; sourceTree = "<group>"; };
 		EE8C90542421E0CD0085E889 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE8C90612421E1770085E889 /* BatteryView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BatteryView.h; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 		EE8C901F2421E0CB0085E889 = {
 			isa = PBXGroup;
 			children = (
-				EE8C902A2421E0CB0085E889 /* DemoForBattery */,
+				EE8C902A2421E0CB0085E889 /* LmzWidgets */,
 				EE8C90462421E0CD0085E889 /* DemoForBatteryTests */,
 				EE8C90512421E0CD0085E889 /* DemoForBatteryUITests */,
 				EE8C90292421E0CB0085E889 /* Products */,
@@ -92,14 +92,14 @@
 		EE8C90292421E0CB0085E889 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EE8C90282421E0CB0085E889 /* DemoForBattery.app */,
-				EE8C90432421E0CD0085E889 /* DemoForBatteryTests.xctest */,
-				EE8C904E2421E0CD0085E889 /* DemoForBatteryUITests.xctest */,
+				EE8C90282421E0CB0085E889 /* LmzWidgets.app */,
+				EE8C90432421E0CD0085E889 /* LmzWidgetsTests.xctest */,
+				EE8C904E2421E0CD0085E889 /* LmzWidgetsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EE8C902A2421E0CB0085E889 /* DemoForBattery */ = {
+		EE8C902A2421E0CB0085E889 /* LmzWidgets */ = {
 			isa = PBXGroup;
 			children = (
 				EE8C90602421E14F0085E889 /* BatteryView */,
@@ -112,7 +112,7 @@
 				EE8C903C2421E0CD0085E889 /* Info.plist */,
 				EE8C903D2421E0CD0085E889 /* main.m */,
 			);
-			path = DemoForBattery;
+			path = LmzWidgets;
 			sourceTree = "<group>";
 		};
 		EE8C90462421E0CD0085E889 /* DemoForBatteryTests */ = {
@@ -145,9 +145,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EE8C90272421E0CB0085E889 /* DemoForBattery */ = {
+		EE8C90272421E0CB0085E889 /* LmzWidgets */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EE8C90572421E0CD0085E889 /* Build configuration list for PBXNativeTarget "DemoForBattery" */;
+			buildConfigurationList = EE8C90572421E0CD0085E889 /* Build configuration list for PBXNativeTarget "LmzWidgets" */;
 			buildPhases = (
 				EE8C90242421E0CB0085E889 /* Sources */,
 				EE8C90252421E0CB0085E889 /* Frameworks */,
@@ -157,14 +157,14 @@
 			);
 			dependencies = (
 			);
-			name = DemoForBattery;
+			name = LmzWidgets;
 			productName = DemoForBattery;
-			productReference = EE8C90282421E0CB0085E889 /* DemoForBattery.app */;
+			productReference = EE8C90282421E0CB0085E889 /* LmzWidgets.app */;
 			productType = "com.apple.product-type.application";
 		};
-		EE8C90422421E0CD0085E889 /* DemoForBatteryTests */ = {
+		EE8C90422421E0CD0085E889 /* LmzWidgetsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EE8C905A2421E0CD0085E889 /* Build configuration list for PBXNativeTarget "DemoForBatteryTests" */;
+			buildConfigurationList = EE8C905A2421E0CD0085E889 /* Build configuration list for PBXNativeTarget "LmzWidgetsTests" */;
 			buildPhases = (
 				EE8C903F2421E0CD0085E889 /* Sources */,
 				EE8C90402421E0CD0085E889 /* Frameworks */,
@@ -175,14 +175,14 @@
 			dependencies = (
 				EE8C90452421E0CD0085E889 /* PBXTargetDependency */,
 			);
-			name = DemoForBatteryTests;
+			name = LmzWidgetsTests;
 			productName = DemoForBatteryTests;
-			productReference = EE8C90432421E0CD0085E889 /* DemoForBatteryTests.xctest */;
+			productReference = EE8C90432421E0CD0085E889 /* LmzWidgetsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		EE8C904D2421E0CD0085E889 /* DemoForBatteryUITests */ = {
+		EE8C904D2421E0CD0085E889 /* LmzWidgetsUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EE8C905D2421E0CD0085E889 /* Build configuration list for PBXNativeTarget "DemoForBatteryUITests" */;
+			buildConfigurationList = EE8C905D2421E0CD0085E889 /* Build configuration list for PBXNativeTarget "LmzWidgetsUITests" */;
 			buildPhases = (
 				EE8C904A2421E0CD0085E889 /* Sources */,
 				EE8C904B2421E0CD0085E889 /* Frameworks */,
@@ -193,9 +193,9 @@
 			dependencies = (
 				EE8C90502421E0CD0085E889 /* PBXTargetDependency */,
 			);
-			name = DemoForBatteryUITests;
+			name = LmzWidgetsUITests;
 			productName = DemoForBatteryUITests;
-			productReference = EE8C904E2421E0CD0085E889 /* DemoForBatteryUITests.xctest */;
+			productReference = EE8C904E2421E0CD0085E889 /* LmzWidgetsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -220,7 +220,7 @@
 					};
 				};
 			};
-			buildConfigurationList = EE8C90232421E0CB0085E889 /* Build configuration list for PBXProject "DemoForBattery" */;
+			buildConfigurationList = EE8C90232421E0CB0085E889 /* Build configuration list for PBXProject "LmzWidgets" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -233,9 +233,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EE8C90272421E0CB0085E889 /* DemoForBattery */,
-				EE8C90422421E0CD0085E889 /* DemoForBatteryTests */,
-				EE8C904D2421E0CD0085E889 /* DemoForBatteryUITests */,
+				EE8C90272421E0CB0085E889 /* LmzWidgets */,
+				EE8C90422421E0CD0085E889 /* LmzWidgetsTests */,
+				EE8C904D2421E0CD0085E889 /* LmzWidgetsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -299,12 +299,12 @@
 /* Begin PBXTargetDependency section */
 		EE8C90452421E0CD0085E889 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = EE8C90272421E0CB0085E889 /* DemoForBattery */;
+			target = EE8C90272421E0CB0085E889 /* LmzWidgets */;
 			targetProxy = EE8C90442421E0CD0085E889 /* PBXContainerItemProxy */;
 		};
 		EE8C90502421E0CD0085E889 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = EE8C90272421E0CB0085E889 /* DemoForBattery */;
+			target = EE8C90272421E0CB0085E889 /* LmzWidgets */;
 			targetProxy = EE8C904F2421E0CD0085E889 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -481,7 +481,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.manniu.burryPoint.DemoForBatteryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DemoForBattery.app/DemoForBattery";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LmzWidgets.app/LmzWidgets";
 			};
 			name = Debug;
 		};
@@ -501,7 +501,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.manniu.burryPoint.DemoForBatteryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DemoForBattery.app/DemoForBattery";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LmzWidgets.app/LmzWidgets";
 			};
 			name = Release;
 		};
@@ -544,7 +544,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EE8C90232421E0CB0085E889 /* Build configuration list for PBXProject "DemoForBattery" */ = {
+		EE8C90232421E0CB0085E889 /* Build configuration list for PBXProject "LmzWidgets" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EE8C90552421E0CD0085E889 /* Debug */,
@@ -553,7 +553,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EE8C90572421E0CD0085E889 /* Build configuration list for PBXNativeTarget "DemoForBattery" */ = {
+		EE8C90572421E0CD0085E889 /* Build configuration list for PBXNativeTarget "LmzWidgets" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EE8C90582421E0CD0085E889 /* Debug */,
@@ -562,7 +562,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EE8C905A2421E0CD0085E889 /* Build configuration list for PBXNativeTarget "DemoForBatteryTests" */ = {
+		EE8C905A2421E0CD0085E889 /* Build configuration list for PBXNativeTarget "LmzWidgetsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EE8C905B2421E0CD0085E889 /* Debug */,
@@ -571,7 +571,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EE8C905D2421E0CD0085E889 /* Build configuration list for PBXNativeTarget "DemoForBatteryUITests" */ = {
+		EE8C905D2421E0CD0085E889 /* Build configuration list for PBXNativeTarget "LmzWidgetsUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EE8C905E2421E0CD0085E889 /* Debug */,
