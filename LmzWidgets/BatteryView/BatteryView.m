@@ -7,14 +7,13 @@
 //
 
 #import "BatteryView.h"
-
 #define UIColorFromRGB(rgbValue,a) ([UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:(a)])
 
 #define lineWidth self.frame.size.width/50
 #define widthEdge self.frame.size.width/50
 @interface BatteryView() {
     CGContextRef ctx;
-    float percent;
+    
     UIColor *fillColor;
     UIColor *lineColor;
 }
@@ -22,7 +21,7 @@
 @end
 
 @implementation BatteryView
-
+@synthesize percent;
 
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
@@ -31,16 +30,9 @@
         self.backgroundColor = [UIColor clearColor];
         self.opaque = YES;
         percent = 0;
-        [NSTimer scheduledTimerWithTimeInterval:0.01 repeats:YES block:^(NSTimer * _Nonnull timer) {
-            if (self->percent < 1) {
-                self->percent = self->percent + 0.001;
-            }else {
-                self->percent = 0;
-            }
-//            percent = 1;
-            
-            [self setNeedsDisplay];
-        }];
+        self.lightningStyle = [[LightningStyle alloc] init];
+        self.lightningStyle.fillColor = UIColorFromRGB(0x666666,1);
+        self.lightningStyle.borderColor = UIColorFromRGB(0xAAAAAA,1);
     }
     
     return self;
@@ -109,32 +101,29 @@
 
     //闪电⚡️
     if(_batteryState == 1) {
-        UIColor *aColor = UIColorFromRGB(0x444444,1);
-        UIColor *alineColor = UIColorFromRGB(0xDDDDDD,1);
+        UIColor *aColor = self.lightningStyle.fillColor;
+        UIColor *alineColor = self.lightningStyle.borderColor;
         CGContextSetLineJoin(ctx, kCGLineJoinMiter);
         CGContextSetLineWidth(ctx, lineWidth/2);//线的宽度
         CGContextSetStrokeColorWithColor(ctx, alineColor.CGColor);//线框颜色
         CGContextSetFillColorWithColor(ctx, aColor.CGColor);//填充颜色
         //point1
-        CGContextMoveToPoint(ctx,self.frame.size.width/2 + widthEdge * 2,self.frame.size.height * 0.5 - (self.frame.size.width/2.5 - widthEdge * 2)/2 + widthEdge + offsetY);
+        CGContextMoveToPoint(ctx,self.frame.size.width/2 + widthEdge * 2 - widthEdge,self.frame.size.height * 0.5 - (self.frame.size.width/2.5 - widthEdge * 2)/2 + widthEdge + offsetY);
         //point2
-        CGContextAddLineToPoint(ctx, self.frame.size.width/2 - widthEdge*4, self.frame.size.height/2  + widthEdge + offsetY);
+        CGContextAddLineToPoint(ctx, self.frame.size.width/2 - widthEdge*4 - widthEdge, self.frame.size.height/2  + widthEdge + offsetY);
         //point3
-        CGContextAddLineToPoint(ctx, self.frame.size.width/2 , self.frame.size.height/2 + widthEdge + offsetY);
+        CGContextAddLineToPoint(ctx, self.frame.size.width/2 - widthEdge, self.frame.size.height/2 + widthEdge + offsetY);
         
         //point4
-        CGContextAddLineToPoint(ctx, self.frame.size.width/2 - widthEdge* 2, self.frame.size.height * 0.5 + (self.frame.size.width/2.5 - widthEdge * 2)/2 - widthEdge + offsetY);
+        CGContextAddLineToPoint(ctx, self.frame.size.width/2 - widthEdge* 2 - widthEdge, self.frame.size.height * 0.5 + (self.frame.size.width/2.5 - widthEdge * 2)/2 - widthEdge + offsetY);
         //point5
-        CGContextAddLineToPoint(ctx, self.frame.size.width/2 + widthEdge * 4, self.frame.size.height/2 - widthEdge + offsetY);
+        CGContextAddLineToPoint(ctx, self.frame.size.width/2 + widthEdge * 4 - widthEdge, self.frame.size.height/2 - widthEdge + offsetY);
         //point6
-        CGContextAddLineToPoint(ctx, self.frame.size.width/2 , self.frame.size.height * 0.5 - widthEdge + offsetY);
+        CGContextAddLineToPoint(ctx, self.frame.size.width/2 - widthEdge, self.frame.size.height * 0.5 - widthEdge + offsetY);
         CGContextClosePath(ctx);
         CGContextDrawPath(ctx, kCGPathFillStroke);
     }
     
-    
-
-
     CGContextSetFillColorWithColor(ctx, fillColor.CGColor);//填充颜色
     CGContextSetFillColorWithColor(ctx, fillColor.CGColor);
     NSString *s = [NSString stringWithFormat:@"%0.0f%%",percent * 100];
@@ -169,12 +158,20 @@
     [s drawInRect:iRect withAttributes:@{NSFontAttributeName:font,NSParagraphStyleAttributeName:paragraphStyle,NSForegroundColorAttributeName:fillColor}];
 
 }
-- (void)drawLightView {
 
+- (void)setPercent:(float)percent {
+    self->percent = percent;
+    [self setNeedsDisplay];
 }
 
-- (void)drawText {
-
+- (void)setTextStyle:(TextStyle)textStyle {
+    _textStyle = textStyle;
+    [self setNeedsDisplay];
+}
+//重写batteryState setter方法
+- (void)setBatteryState:(BatteryState)batteryState {
+    _batteryState = batteryState;
+    [self setNeedsDisplay];
 }
 
 void CGContextAddRoundRect(CGContextRef context,CGRect rect,CGPathDrawingMode mode,CGFloat radius){

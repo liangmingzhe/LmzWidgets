@@ -15,6 +15,7 @@
 		EE8C90482421E0CD0085E889 /* DemoForBatteryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE8C90472421E0CD0085E889 /* DemoForBatteryTests.m */; };
 		EE8C90532421E0CD0085E889 /* DemoForBatteryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE8C90522421E0CD0085E889 /* DemoForBatteryUITests.m */; };
 		EE8C90632421E1770085E889 /* BatteryView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE8C90622421E1770085E889 /* BatteryView.m */; };
+		EEC476DE246D66C100416B4B /* LightningStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC476DD246D66C100416B4B /* LightningStyle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,8 @@
 		EE8C90542421E0CD0085E889 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE8C90612421E1770085E889 /* BatteryView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BatteryView.h; sourceTree = "<group>"; };
 		EE8C90622421E1770085E889 /* BatteryView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BatteryView.m; sourceTree = "<group>"; };
+		EEC476DC246D66C100416B4B /* LightningStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LightningStyle.h; sourceTree = "<group>"; };
+		EEC476DD246D66C100416B4B /* LightningStyle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LightningStyle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				EE8C902A2421E0CB0085E889 /* LmzWidgets */,
-				EE8C90462421E0CD0085E889 /* DemoForBatteryTests */,
-				EE8C90512421E0CD0085E889 /* DemoForBatteryUITests */,
+				EE8C90462421E0CD0085E889 /* LmzWidgetsTests */,
+				EE8C90512421E0CD0085E889 /* LmzWidgetsUITests */,
 				EE8C90292421E0CB0085E889 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -115,22 +118,22 @@
 			path = LmzWidgets;
 			sourceTree = "<group>";
 		};
-		EE8C90462421E0CD0085E889 /* DemoForBatteryTests */ = {
+		EE8C90462421E0CD0085E889 /* LmzWidgetsTests */ = {
 			isa = PBXGroup;
 			children = (
 				EE8C90472421E0CD0085E889 /* DemoForBatteryTests.m */,
 				EE8C90492421E0CD0085E889 /* Info.plist */,
 			);
-			path = DemoForBatteryTests;
+			path = LmzWidgetsTests;
 			sourceTree = "<group>";
 		};
-		EE8C90512421E0CD0085E889 /* DemoForBatteryUITests */ = {
+		EE8C90512421E0CD0085E889 /* LmzWidgetsUITests */ = {
 			isa = PBXGroup;
 			children = (
 				EE8C90522421E0CD0085E889 /* DemoForBatteryUITests.m */,
 				EE8C90542421E0CD0085E889 /* Info.plist */,
 			);
-			path = DemoForBatteryUITests;
+			path = LmzWidgetsUITests;
 			sourceTree = "<group>";
 		};
 		EE8C90602421E14F0085E889 /* BatteryView */ = {
@@ -138,6 +141,8 @@
 			children = (
 				EE8C90612421E1770085E889 /* BatteryView.h */,
 				EE8C90622421E1770085E889 /* BatteryView.m */,
+				EEC476DC246D66C100416B4B /* LightningStyle.h */,
+				EEC476DD246D66C100416B4B /* LightningStyle.m */,
 			);
 			path = BatteryView;
 			sourceTree = "<group>";
@@ -272,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE8C90332421E0CB0085E889 /* ViewController.m in Sources */,
+				EEC476DE246D66C100416B4B /* LightningStyle.m in Sources */,
 				EE8C902D2421E0CB0085E889 /* AppDelegate.m in Sources */,
 				EE8C90632421E1770085E889 /* BatteryView.m in Sources */,
 				EE8C903E2421E0CD0085E889 /* main.m in Sources */,
@@ -437,7 +443,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XYFPU28B7N;
-				INFOPLIST_FILE = DemoForBattery/Info.plist;
+				INFOPLIST_FILE = /Users/lmz/Gits/LmzWidgets/LmzWidgets/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,7 +460,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XYFPU28B7N;
-				INFOPLIST_FILE = DemoForBattery/Info.plist;
+				INFOPLIST_FILE = /Users/lmz/Gits/LmzWidgets/LmzWidgets/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
